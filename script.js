@@ -3,6 +3,7 @@ const list = document.getElementById("character-list");
 const headshot = document.getElementById("headshot");
 
 fetch("https://api.sampleapis.com/futurama/characters")
+  //fetches the api
   .then((response) => response.json())
   //response.json() -> converts the response body to a Javascript object/array
   .then((characters) => {

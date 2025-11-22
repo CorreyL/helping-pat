@@ -5,9 +5,9 @@ const headshot = document.getElementById("headshot");
 fetch("https://api.sampleapis.com/futurama/characters")
     //fetches the api
   .then((response) => response.json())
-    //takes the 'response' and turns it into a json
+  //response.json() -> converts the response body to a Javascript object/array
   .then((characters) => {
-    //turns it into an array called 'characters'
+  //.then((characters) ... receives the parsed JSON data (an array) - and then parses (turns) it into a JavaScript Array (called 'characters') - (im defining an anonymous function)
     characters.forEach((character) => {
       // Your code goes here to render each character name in the ol#character-list element
 
