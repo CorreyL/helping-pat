@@ -10,7 +10,8 @@ fetch("https://api.sampleapis.com/futurama/characters")
   //.then((characters) ... receives the parsed JSON data (an array) - and then parses (turns) it into a JavaScript Array (called 'characters') - (im defining an anonymous function)
     characters.forEach((character) => {
       // Your code goes here to render each character name in the ol#character-list element
-
+      const characterNameListItem = document.createElement("li");
+      characterNameListItem.textContent = character.name.first;
       
       // And to also add a click handler so that the img#headshot element gets populated with the character's
       // image from the API
